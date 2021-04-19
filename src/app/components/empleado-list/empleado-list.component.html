@@ -1,0 +1,35 @@
+<div class="container mt-3">
+<app-count-empleados [id] = "totalEmpleados()" 
+                    [delantero] = "totalDel()" 
+                    [medio] = "totalMed()" 
+                    [arquero] = "totalArq()"
+                    (contRadioButtonChange) = "jugadoresButtonChange($event)">
+</app-count-empleados>
+    <div class="card mt-3">
+        <div class="card-body">
+            <table class="table caption-top">
+                <caption>Lista de jugadores</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Number</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Position</th>
+                    <th scope="col">Rol en el Team</th>
+                    <th scope="col">Salary</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <ng-container *ngFor = "let empleado of listEmpleado">
+                        <tr *ngIf = "radioSelector == 'Todos' || radioSelector == empleado.position">
+                            <th>{{empleado.id}}</th>
+                            <td>{{empleado.name}}</td>
+                            <td>{{empleado.position}}</td>
+                            <td>{{empleado.rol}}</td>
+                            <td>{{empleado.salary | currency}}</td>
+                        </tr>
+                    </ng-container>
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>

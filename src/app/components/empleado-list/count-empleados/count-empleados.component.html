@@ -1,0 +1,20 @@
+<div class="card">
+    <div class="card-body">
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" [(ngModel)] = "radioSelector" type="radio" name="position" id="todos" value="Todos" (change) = "radioChange()">
+            <label class="form-check-label" for="todos">Todos({{id}})</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" [(ngModel)] = "radioSelector" type="radio" name="position" id="delantero" value="Delantero" (change) = "radioChange()" >
+            <label class="form-check-label" for="delantero">Delantero({{delantero}})</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" [(ngModel)] = "radioSelector" type="radio" name="position" id="medio" value="Medio"  (change) = "radioChange()">
+            <label class="form-check-label" for="medio">Medio({{medio}})</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" [(ngModel)] = "radioSelector" type="radio" name="position" id="arquero" value="Arquero"  (change) = "radioChange()">
+            <label class="form-check-label" for="arquero">Arquero({{arquero}})</label>
+          </div>
+    </div>
+</div>
